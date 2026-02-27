@@ -1,47 +1,167 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Prediction King</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAXX VIP</title>
+
 <style>
 body{
-background:black;
-color:white;
-text-align:center;
-font-family:Arial;
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#0f0f0f;
+    color:white;
+    text-align:center;
 }
-.box{
-border:3px solid orange;
-padding:20px;
-margin:20px;
-border-radius:15px;
+
+.container{
+    max-width:400px;
+    margin:20px auto;
+    padding:20px;
 }
-button{
-background:orange;
-color:white;
-padding:15px 30px;
-border:none;
-border-radius:10px;
-font-size:18px;
+
+.logo{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    border:5px solid #ff3c1f;
+    object-fit:cover;
+    margin-top:20px;
 }
-img{
-width:200px;
-border-radius:15px;
-border:3px solid orange;
+
+h1{
+    margin-top:15px;
+    font-size:28px;
+}
+
+.highlight{
+    color:#ff3c1f;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.desc{
+    color:#ccc;
+    margin-top:15px;
+    font-size:15px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 40px;
+    background:#ff3c1f;
+    color:white;
+    font-weight:bold;
+    border-radius:15px;
+    text-decoration:none;
+    font-size:18px;
+    box-shadow:0 0 20px #ff3c1f;
+}
+
+.offer-box{
+    margin-top:40px;
+    padding:20px;
+    border:2px solid #ff3c1f;
+    border-radius:20px;
+}
+
+.timer{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.time-box{
+    background:#111;
+    padding:15px;
+    border-radius:15px;
+    border:2px solid #ff3c1f;
+    width:80px;
+}
+
+.time-box h2{
+    margin:0;
+    color:#ff3c1f;
+}
+
+.time-box p{
+    margin:5px 0 0;
+    font-size:12px;
+    color:#ccc;
 }
 </style>
 </head>
+
 <body>
 
-<div class="box">
-<img src="YOUR_IMAGE_LINK_HERE">
-<h1>PREDICTION KING 👑</h1>
-<h2>100% Sureshot Prediction Channel</h2>
-<p>Abhi Join Karo aur Daily Profit Kamao 🔥</p>
-<a href="https://t.me/yourlink">
-<button>CLICK HERE TO JOIN NOW</button>
-</a>
+<div class="container">
+
+<img src="IMAGE_LINK_DALO" class="logo">
+
+<h1>MAXX ☠</h1>
+
+<div class="highlight">
+Recover all your Losses <br>
+Get 95% accurate Shots 🔥
 </div>
+
+<div class="desc">
+Join my exclusive Telegram group for premium tips, updates & more excitement!
+</div>
+
+<a href="TELEGRAM_LINK_DALO" class="btn">
+Join Now
+</a>
+
+<div class="offer-box">
+<h2 style="color:#ff3c1f;">⚡ Offer Ends In ⚡</h2>
+
+<div class="timer">
+    <div class="time-box">
+        <h2 id="hours">00</h2>
+        <p>Hours</p>
+    </div>
+    <div class="time-box">
+        <h2 id="minutes">00</h2>
+        <p>Minutes</p>
+    </div>
+    <div class="time-box">
+        <h2 id="seconds">00</h2>
+        <p>Seconds</p>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+// 1 Hour Countdown
+let totalSeconds = 3600;
+
+function updateTimer(){
+    let hours = Math.floor(totalSeconds / 3600);
+    let minutes = Math.floor((totalSeconds % 3600) / 60);
+    let seconds = totalSeconds % 60;
+
+    document.getElementById("hours").innerHTML = 
+        hours.toString().padStart(2,'0');
+    document.getElementById("minutes").innerHTML = 
+        minutes.toString().padStart(2,'0');
+    document.getElementById("seconds").innerHTML = 
+        seconds.toString().padStart(2,'0');
+
+    if(totalSeconds > 0){
+        totalSeconds--;
+    }
+}
+
+setInterval(updateTimer,1000);
+updateTimer();
+</script>
 
 </body>
 </html>
